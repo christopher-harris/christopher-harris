@@ -103,6 +103,13 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://christopher-harris.github.io/christopher-harris/",
+            "name": "The web site of Christopher Harris. Nothing fancy or anything."
+          },
         }
       }
     }
