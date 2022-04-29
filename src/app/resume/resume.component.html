@@ -1,0 +1,116 @@
+<div class="container mb-5 pb-5">
+  <h1>CHRISTOPHER HARRIS</h1>
+
+  <h4>Poetry, TX | 214.546.8455 | ccharris0607@me.com</h4>
+
+  <h5>Skills Summary</h5>
+
+  <ul>
+    <li>Possess 15+ years in various roles, including front-end web development, graphic and digital design, technical support, and customer service.</li>
+    <li>Ability to interact with upper management and executives.</li>
+    <li>Proficient in various software and technical languages.</li>
+    <li>A team player with excellent communication, presentation, leadership, interpersonal and research abilities.</li>
+    <li>Highly motivated individual dedicated to getting the job done regardless of time needed.</li>
+    <li>Ability to multitask in a fast-paced environment.</li>
+    <li>Strong skills in prioritizing tasks, time management and meeting deadlines.</li>
+  </ul>
+
+  <h5>Technologies</h5>
+
+  <ul>
+    <li>Angular 2+</li>
+    <li>JavaScript</li>
+    <li>Typescript</li>
+    <li>GraphQL</li>
+    <li>RxJS</li>
+    <li>
+      State Management
+      <ul>
+        <li>NGRX</li>
+        <li>Akita</li>
+      </ul>
+    </li>
+    <li>SCSS & LESS</li>
+    <li>Tiny bit of AWS, GCP</li>
+    <li>
+      Most modern styling libraries
+      <ul>
+        <li>Bootstrap</li>
+        <li>Material</li>
+        <li>Ant Design</li>
+        <li>Tailwind CSS</li>
+        <li>Semantic UI</li>
+      </ul>
+    </li>
+    <li>Git</li>
+    <li>GitHub</li>
+    <li>JIRA</li>
+    <li>Atlassian Confluence</li>
+  </ul>
+
+  <h5>Education</h5>
+
+  <section *ngFor="let education of educationData" class="mb-2">
+    <h6 class="fw-bolder"><em>{{education.topic}} | {{education.dates}}</em></h6>
+    <p class="text-muted">
+      {{education.school}}
+      <ng-container *ngIf="education.description">
+        | {{education.description}}
+      </ng-container>
+    </p>
+  </section>
+
+  <h5>Experience</h5>
+
+  <section *ngFor="let job of (jobs$ | async)">
+    <h6 class="fw-bolder"><em>{{job.company}}</em></h6>
+    <p>{{job.title}} | {{job.dates}}</p>
+    <p *ngIf="job.shortDescription">
+      {{job.shortDescription}}
+    </p>
+    <ng-container *ngIf="job.description">
+      <ng-container *ngTemplateOutlet="job.description"></ng-container>
+    </ng-container>
+  </section>
+
+</div>
+
+<ng-template #diamondDataDescription>
+  <p>Graphic design, web & SharePoint development, IT Support including Office365 and Exchange Online, Customer Support</p>
+  <ul>
+    <li>Manage all graphic design, content management, web development & design, social media planning & setup, training, and internal IT setup & support.</li>
+    <li>Implement Office365, Exchange Online, and SharePoint setup for the entire company.</li>
+    <li>Support external customers with point-of-sale software and related hardware issues.</li>
+    <li>Assist in fixing any issues related to software, network, security or product knowledge.</li>
+    <li>Setup and supported internal IT hardware and infrastructure including desktops and several server machines.</li>
+    <li>Heavily involved in transitioning to Office365 platform to utilize Microsoft Exchange for all internal employees.</li>
+    <li>Setup and configure Microsoft SharePoint Online to be used as company intranet and knowledge database.</li>
+    <li>Aid customers in getting internally hosted e-commerce web site published to the internet. Also helped in re-designing software created web site.</li>
+    <li>Designed banner for trade show booth, business cards, and various other assets for marketing / main web site.</li>
+    <li>Instrumental in the design of logo and web site for new products.</li>
+    <li>Managed development of current web site (www.theuniformsolution.com) on the Business Catalyst platform, while supporting / updating content for site, and designing / developing new pages as needed.</li>
+  </ul>
+</ng-template>
+
+<ng-template #dcsGlobalDescription>
+  <p>ASP Front-End development and UI design for .NET backend cloud-based patient access program. Also handled any graphic design</p>
+  <ul>
+    <li>Designed various graphics for business cards, web assets and marketing materials.</li>
+    <li>Worked closely with the development team to update the UI/UX of the main system and polish up the code-behind in ASP.NET.</li>
+    <li>Integral part in the redesign of the company’s main web site.</li>
+    <li>Assisted customers and developers in resolving issues with cloud-based patient access and database SaaS system.</li>
+  </ul>
+</ng-template>
+
+<ng-template #gdsxDescription>
+  <p>Helped manage a team that handled all digital and printed marketing assets and web sites plus internal/external training web sites. Completely overhauled marketing direction for company</p>
+  <ul>
+`    <li>Started in a broad support role, then moved to dedicated support for largest client that handled all European travel for large companies. Worked on VB.NET based platform for large travel management and corporate travel departments.</li>
+    <li>Moved into "Customer Engagement Leader/Manager" role working on a small team that handled all graphics, marketing and training of customers</li>
+    <li>Handled all graphics including trade show booth, marketing & sales brochures/materials, business cards, web assets</li>
+    <li>Developed and built internal training site for current and new employees to learn the software and about the company</li>
+    <li>Handled all social media</li>
+    <li>Designed and built new customer facing web site</li>
+    <li>Developed new marketing strategy with CEO and COO</li>
+  </ul>
+</ng-template>

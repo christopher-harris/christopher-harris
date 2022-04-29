@@ -1,0 +1,14 @@
+<div class="container-fluid">
+  <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
+    <a [href]="'mailto: ccharris0607@me.com'" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+      <i class="bi bi-envelope mr-3"></i>
+      <span class="ml-3">ccharris0607@me.com</span>
+    </a>
+
+    <ul class="nav">
+      <li class="nav-item" *ngFor="let route of routes">
+        <a [routerLink]="route.path" class="nav-link" aria-current="page">{{route.path}}</a>
+      </li>
+    </ul>
+  </header>
+</div>
